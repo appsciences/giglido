@@ -1,0 +1,23 @@
+{
+  "name": "keyboard-todo-app",
+  "version": "1.0.0",
+  "description": "A keyboard-driven Todo application with BDD tests",
+  "main": "index.js",
+  "scripts": {
+    "test": "cucumber-js",
+    "test:watch": "cucumber-js --watch"
+  },
+  "keywords": [
+    "todo",
+    "bdd",
+    "keyboard-shortcuts"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@cucumber/cucumber": "^10.3.1",
+    "@types/node": "^20.11.24",
+    "typescript": "^5.3.3",
+    "ts-node": "^10.9.2"
+  }
+} 
