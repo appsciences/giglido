@@ -7,16 +7,16 @@ import 'steps/keyboard_steps.dart';
 import 'steps/todo_steps.dart';
 
 Future<void> main() {
-  final config = FlutterTestConfiguration()
-    ..features = [
+  final config = FlutterTestConfiguration(
+    features: [
       RegExp(r"features/.*\.feature"),
-    ]
-    ..reporters = [
+    ],
+    reporters: [
       ProgressReporter(),
       TestRunSummaryReporter(),
       JsonReporter(path: './report.json')
-    ]
-    ..stepDefinitions = [
+    ],
+    stepDefinitions: [
       // App state steps
       GivenTheAppIsRunning(),
       ThenTheAppShouldBeInIdleMode(),
@@ -33,10 +33,9 @@ Future<void> main() {
       ThenTheHighlightShouldMoveToPreviousItem(),
       ThenIShouldSeeSearchInputField(),
       ThenTodoShouldBeSaved(),
-    ]
-    ..customStepParameterDefinitions = []
-    ..restartAppBetweenScenarios = true
-    ..targetAppPath = "test_driver/app.dart";
+    ],
+    customStepParameterDefinitions: [],
+  );
     
   return GherkinRunner().execute(config);
 } 

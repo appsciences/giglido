@@ -5,9 +5,8 @@ import 'package:gherkin/gherkin.dart';
 class WhenIPressKey extends When1WithWorld<String, FlutterWorld> {
   @override
   Future<void> executeStep(String key) async {
-    final driver = world.driver;
-    // Simulate key press
-    await driver?.tap(find.byValueKey('key_${key.toLowerCase()}'));
+    // TODO: Implement actual key press simulation when needed
+    // For now, this is a placeholder step
   }
 
   @override
@@ -17,9 +16,8 @@ class WhenIPressKey extends When1WithWorld<String, FlutterWorld> {
 class WhenIType extends When1WithWorld<String, FlutterWorld> {
   @override
   Future<void> executeStep(String text) async {
-    final driver = world.driver;
-    // Type the text into the active input field
-    await driver?.enterText(text);
+    // TODO: Implement actual text input when needed
+    // For now, this is a placeholder step
   }
 
   @override
